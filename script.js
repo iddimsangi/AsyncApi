@@ -6,7 +6,7 @@ const countriesContainer = document.querySelector(".countries");
 ///////////////////////////////////////
 const coutryFuc = (countryData) => {
   const html = ` <article class="country">
-    <img class="country__img" src="${countryData.flag}" />
+    <img class="country__img" src="${countryData.flags.png}" />
     <div class="country__data">
       <h3 class="country__name">${countryData.name.common}</h3>
       <h4 class="country__region">${countryData.region}</h4>
@@ -29,6 +29,7 @@ const fetchCountryRender = (country) => {
       console.log(data);
       console.log(data[0].name.common);
       console.log(data[0].currencies.EUR.name);
+      console.log(data[0].flags.png);
       coutryFuc(data[0]);
     });
 };
